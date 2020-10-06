@@ -1,0 +1,25 @@
+{
+  "name": "symf",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/extasy44/VideoService-Symfony.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/extasy44/VideoService-Symfony/issues"
+  },
+  "homepage": "https://github.com/extasy44/VideoService-Symfony#readme",
+  "devDependencies": {
+    "@symfony/webpack-encore": "^0.31.0"
+  }
+}
