@@ -1,0 +1,15 @@
+composer require symfony/maker-bundle --dev
+composer require annotations
+composer require symfony/apache-pack
+
+---->
+
+bin/console make:controller <controller_Name>
+
+
+
+---->
+bin/console doctrine:database:create
+bin/console make:entity
+bin/console make:migration
+bin/console doctrine:migrations:migrate
