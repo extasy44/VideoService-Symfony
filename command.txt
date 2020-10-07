@@ -13,3 +13,11 @@ bin/console doctrine:database:create
 bin/console make:entity
 bin/console make:migration
 bin/console doctrine:migrations:migrate
+
+
+---->
+rm src/Migrations/*.php &&
+bin/console doctrine:schema:drop -n -q --force --full-database &&
+bin/console make:migration &&
+bin/console doctrine:migrations:migrate -n -q &&
+bin/console doctrine:fixtures:load -n -q
