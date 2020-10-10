@@ -28,12 +28,13 @@ class Video
     private $path;
 
     /**
-     * @ORM\Column(type="integer")
+     * @ORM\Column(type="integer", nullable=true)
      */
     private $duration;
 
     /**
      * @ORM\ManyToOne(targetEntity="App\Entity\Category", inversedBy="videos")
+     * @ORM\JoinColumn(name="category_id", referencedColumnName="id", onDelete="CASCADE")
      */
     private $category;
 
@@ -71,7 +72,7 @@ class Video
         return $this->duration;
     }
 
-    public function setDuration(int $duration): self
+    public function setDuration(?int $duration): self
     {
         $this->duration = $duration;
 
